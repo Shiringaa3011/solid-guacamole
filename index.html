@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>самый классный проект</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="root">
+    <!-- разметка шапки сайта -->
+    <header class="header">
+        <h1 class="title">самый классный проект</h1>
+        <a href="#" class="bot">бот</a>
+    </header>
+    <!-- разметка основного тела сайта -->
+    <main class="main">
+        <!-- секция в которой будет осуществляться генерация свойств css -->
+        <section class="designer">
+            <!-- блок отвечающий за визуализацию свойств css -->
+            <div class="cube">
+                <div class="block"></div>
+            </div>
+            <!-- блок с регулировками параметров свойств -->
+            <div class="tabs">
+                <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                <label for="tab-btn-1">Тени</label>
+                <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                <label for="tab-btn-2">Градиент</label>
+                <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                <label for="tab-btn-3">Форма</label>
+                <!-- закладка с регулировкой тени -->
+                <div id="content-1">
+                    <fieldset class="f"> 
+                        <legend> Горизонтальное смещение </legend>
+                        <p class="p">
+                            <input class="i hor" type="range" min="-100" max="100" value="10" oninput="document.getElementById('rangeValue1').innerHTML = this.value;">
+                            <span class="s" id="rangeValue1">10</span>
+                            <span>px</span>
+                        </p>
+                    </fieldset>
+                    <fieldset class="f"> 
+                        <legend> Вертикальное смещение </legend>
+                        <p class="p">
+                            <input class="i ver" type="range" min="-100" max="100" value="10" oninput="document.getElementById('rangeValue2').innerHTML = this.value;">
+                            <span class="s" id="rangeValue2">10</span>
+                            <span>px</span>
+                        </p>
+                    </fieldset>
+                    <hr>
+                    <fieldset class="f"> 
+                        <legend> Размытие </legend>
+                        <p class="p">
+                            <input class="i blur" type="range" min="0" max="100" value="10" oninput="document.getElementById('rangeValue3').innerHTML = this.value;">
+                            <span class="s" id="rangeValue3">10</span>
+                            <span>px</span>
+                        </p>
+                    </fieldset>
+                    <fieldset class="f"> 
+                        <legend> Растяжение </legend>
+                        <p class="p">
+                            <input class="i str" type="range" min="-100" max="100" value="10" oninput="document.getElementById('rangeValue4').innerHTML = this.value;">
+                            <span class="s" id="rangeValue4">10</span>
+                            <span>px</span>
+                        </p>
+                    </fieldset>
+                    <hr>
+                    <fieldset class="f">
+                        <legend> Цвет тени </legend>
+                        <p class="p">
+                            <input class="col" type="color" value="#16DF6D" oninput="document.getElementById('rangeValue5').innerHTML = this.value;">
+                            <span class="s" id="rangeValue5">#16df6d</span>
+                        </p>
+                    </fieldset>
+                    <fieldset class="f"> 
+                        <legend> Прозрачность </legend>
+                        <p class="p">
+                            <input class="i tra" type="range" min="0" max="10" value="1" oninput="document.getElementById('rangeValue6').innerHTML = this.value / 10;">
+                            <span class="s" id="rangeValue6">0.1</span>
+                        </p>
+                    </fieldset>
+                  </div>
+                  <!-- закладка с регулировками параметров свойства задающего линейный градиент (заливки объекта) -->
+                  <div id="content-2">
+                    <fieldset class="f">
+                        <legend> Цвета градиента </legend>
+                        <p class="p">
+                            <input class="col-one" type="color" value="#1d0fe6" oninput="document.getElementById('rangeValue7').innerHTML = this.value;">
+                            <span class="s" id="rangeValue7">#1d0fe6</span>
+                        </p>
+                        <p class="p">
+                            <input class="col-two" type="color" value="#099cce" oninput="document.getElementById('rangeValue8').innerHTML = this.value;">
+                            <span class="s" id="rangeValue8">#099cce</span>
+                        </p>
+                    </fieldset>
+                    <hr>
+                    <fieldset class="f"> 
+                        <legend> Угол градиента </legend>
+                        <p class="p">
+                            <input class="i deg" type="range" min="0" max="359" value="45" oninput="document.getElementById('rangeValue9').innerHTML = this.value;">
+                            <span class="s" id="rangeValue9">45</span>
+                            <span>'</span>
+                        </p>
+                    </fieldset>
+                    <hr>
+                    <fieldset class="f"> 
+                        <legend> Смещение первого цвета </legend>
+                        <p class="p">
+                            <input class="i one" type="range" min="0" max="100" value="20" oninput="document.getElementById('rangeValue10').innerHTML = this.value;">
+                            <span class="s" id="rangeValue10">20</span>
+                            <span>%</span>
+                        </p>
+                    </fieldset>
+                    <fieldset class="f"> 
+                        <legend> Смещение второго цвета </legend>
+                        <p class="p">
+                            <input class="i two" type="range" min="0" max="100" value="70" oninput="document.getElementById('rangeValue11').innerHTML = this.value;">
+                            <span class="s" id="rangeValue11">70</span>
+                            <span>%</span>
+                        </p>
+                    </fieldset>
+                  </div>
+                  <!-- закладка с регулировками параметров свойства, осуществляющее изменение скругления углов объекта -->
+                  <div id="content-3">
+                    <fieldset class="f"> 
+                        <legend> Правый верхний угол </legend>
+                        <p class="p">
+                            <span class="s" id="rangeValue12">70</span>
+                            <span>%</span>
+                            <input class="i top-input" type="range" min="0" max="100" value="70" oninput="document.getElementById('rangeValue12').innerHTML = this.value; document.getElementById('rangeValue13').innerHTML = 100 - this.value;">
+                            <span class="s" id="rangeValue13">30</span>
+                            <span>%</span>
+                        </p>
+                    </fieldset>
+                    <hr>
+                    <fieldset class="f"> 
+                        <legend> Левый нижний угол </legend>
+                        <p class="p">
+                            <span class="s" id="rangeValue14">30</span>
+                            <span>%</span>
+                            <input class="i bottom-input" type="range" min="0" max="100" value="30" oninput="document.getElementById('rangeValue14').innerHTML = this.value; document.getElementById('rangeValue15').innerHTML = 100 - this.value;">
+                            <span class="s" id="rangeValue15">70</span>
+                            <span>%</span>
+                        </p>
+                    </fieldset>
+                    <hr>
+                    <fieldset class="f"> 
+                        <legend> Левый верхний угол </legend>
+                        <p class="p">
+                            <span class="s" id="rangeValue16">30</span>
+                            <span>%</span>
+                            <input class="i left-input" type="range" min="0" max="100" value="30" oninput="document.getElementById('rangeValue16').innerHTML = this.value; document.getElementById('rangeValue17').innerHTML = 100 - this.value;">
+                            <span class="s" id="rangeValue17">70</span>
+                            <span>%</span>
+                        </p>
+                    </fieldset>
+                    <hr>
+                    <fieldset class="f"> 
+                        <legend> Правый нижний угол </legend>
+                        <p class="p">
+                            <span class="s" id="rangeValue18">30</span>
+                            <span>%</span>
+                            <input class="i right-input" type="range" min="0" max="100" value="30" oninput="document.getElementById('rangeValue18').innerHTML = this.value; document.getElementById('rangeValue19').innerHTML = 100 - this.value;">
+                            <span class="s" id="rangeValue19">70</span>
+                            <span>%</span>
+                        </p>
+                    </fieldset>
+                  </div>
+            </div>
+        </section>
+        <section class="code">
+            <h2>CSS код для вставки:</h2>
+            <div class="code-box"></div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2023. Анастасия Ширинга</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
