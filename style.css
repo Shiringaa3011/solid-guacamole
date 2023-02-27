@@ -240,6 +240,7 @@ input[type="color"]::-moz-color-swatch {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--main-background-color);
 }
   
 .code-box {
@@ -269,6 +270,7 @@ input[type="color"]::-moz-color-swatch {
     justify-content: center;
     align-items: center;
     background-color: var(--second-background-color);
+    color: var(--main-border-color);
 }
   
 .footer p {
