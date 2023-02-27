@@ -240,19 +240,20 @@ input[type="color"]::-moz-color-swatch {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--main-background-color);
 }
   
 .code-box {
     width: 50%;
     padding: 80px;
     background-color: var(--second-background-color);
+    color: var(--main-background-color);
 }
   
 .code h2 {
     font-family: 'Inter';
     font-weight: 700;
     font-size: 24px;
+    color: var(--second-background-color);
 }
   
 .code-box p {
